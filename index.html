@@ -3,354 +3,560 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sylvester Keaton Clarke — Operations & Compliance Professional</title>
+<title>Sylvester Keaton Clarke — Duty Supervisor Candidate</title>
+<meta name="description" content="Portfolio of Sylvester Keaton Clarke — Operations & Duty Supervisor candidate, Accra.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2317111A'/%3E%3Cpath d='M50 15 L58 45 L88 55 L58 58 L52 82 L48 82 L46 58 L12 55 L46 45 Z' fill='%23C4921B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #10181C;
-    --panel: #172329;
-    --panel-2: #1D2B32;
-    --line: #2B3A41;
-    --text: #ECE7DA;
-    --muted: #8FA0A6;
-    --amber: #F2A93C;
-    --teal: #4FD1C5;
-    --coral: #F0654A;
-    --grid: rgba(236,231,218,0.035);
+    --ink:#17111A;
+    --ink-2:#20161C;
+    --maroon:#2A1420;
+    --pearl:#F7F3EA;
+    --pearl-dim:#EDE6D6;
+    --stone:#B7A896;
+    --stone-dim:#7d7266;
+    --gold:#C4921B;
+    --gold-bright:#E9C568;
+    --line: rgba(196,146,27,0.28);
+    --radius: 2px;
   }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:
-      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(79,209,197,0.08), transparent 60%),
-      radial-gradient(ellipse 700px 500px at 90% 10%, rgba(242,169,60,0.07), transparent 60%),
-      var(--bg);
-    color:var(--text);
-    font-family:'Source Serif 4', Georgia, serif;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    background-image:
-      linear-gradient(var(--grid) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid) 1px, transparent 1px),
-      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(79,209,197,0.08), transparent 60%),
-      radial-gradient(ellipse 700px 500px at 90% 10%, rgba(242,169,60,0.07), transparent 60%);
-    background-size: 42px 42px, 42px 42px, auto, auto;
-  }
-  ::selection{background:var(--amber); color:#10181C;}
-  a{color:inherit; text-decoration:none;}
-  .wrap{max-width:1080px; margin:0 auto; padding:0 32px;}
-  .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    color:var(--teal);
-    display:flex; align-items:center; gap:10px;
-    margin-bottom:14px;
-  }
-  .eyebrow::before{content:''; width:22px; height:1px; background:var(--teal); display:inline-block;}
-  h1,h2,h3{font-family:'Space Grotesk', sans-serif; letter-spacing:-0.01em;}
 
-  /* NAV */
-  nav{
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--pearl);
+    font-family:'Manrope',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+
+  a{color:inherit; text-decoration:none;}
+  img,svg{display:block; max-width:100%;}
+
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  ::selection{ background:var(--gold); color:var(--ink); }
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--gold-bright);
+    outline-offset:3px;
+  }
+
+  /* ---------- background texture ---------- */
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.05; mix-blend-mode:overlay;
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
     position:sticky; top:0; z-index:50;
-    background:rgba(16,24,28,0.86);
+    background:rgba(23,17,26,0.86);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
-  nav .wrap{display:flex; align-items:center; justify-content:space-between; height:66px;}
-  .brand{font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:14px; letter-spacing:0.06em;}
-  .brand span{color:var(--amber);}
-  nav ul{list-style:none; display:flex; gap:30px;}
-  nav ul li a{font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); transition:color .2s;}
-  nav ul li a:hover{color:var(--teal);}
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+    max-width:1120px; margin:0 auto;
+  }
+  .nav-mark{
+    display:flex; align-items:center; gap:10px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.82rem; letter-spacing:0.08em;
+  }
+  .nav-mark b{ color:var(--gold-bright); font-weight:700;}
+  .nav-links{ display:flex; gap:28px; font-size:0.82rem; letter-spacing:0.04em;}
+  .nav-links a{ color:var(--stone); position:relative; padding-bottom:4px; transition:color .2s; }
+  .nav-links a:hover{ color:var(--pearl); }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--gold);
+    transform:scaleX(0); transform-origin:left; transition:transform .25s ease;
+  }
+  .nav-links a:hover::after{ transform:scaleX(1); }
   .nav-cta{
-    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.05em;
-    border:1px solid var(--amber); color:var(--amber); padding:8px 16px; border-radius:2px;
-    transition:all .2s;
+    font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.06em;
+    border:1px solid var(--gold); color:var(--gold-bright); padding:8px 16px; border-radius:1px;
+    transition:background .2s, color .2s;
   }
-  .nav-cta:hover{background:var(--amber); color:#10181C;}
-  .navlinks, .nav-cta{display:flex;}
-  @media (max-width:760px){ .navlinks{display:none;} }
+  .nav-cta:hover{ background:var(--gold); color:var(--ink); }
+  @media (max-width:760px){ .nav-links{display:none;} }
 
-  /* HERO */
-  header.hero{padding:96px 0 70px; border-bottom:1px solid var(--line); position:relative; overflow:hidden;}
-  .hero-grid{display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;}
-  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;} }
-  .status-pill{
-    display:inline-flex; align-items:center; gap:8px;
-    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
-    color:var(--teal); border:1px solid rgba(79,209,197,0.35); background:rgba(79,209,197,0.06);
-    padding:6px 12px; border-radius:20px; margin-bottom:26px;
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:76px 0 60px;
+    overflow:hidden;
   }
-  .status-pill .dot{width:7px; height:7px; border-radius:50%; background:var(--teal); box-shadow:0 0 8px var(--teal); animation:pulse 2s infinite;}
-  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:.35;}}
-  h1.name{font-size:56px; font-weight:700; line-height:1.04; margin-bottom:18px;}
-  h1.name .last{color:var(--amber);}
-  .role-line{
-    font-family:'IBM Plex Mono', monospace; font-size:14px; color:var(--muted); letter-spacing:0.02em;
-    margin-bottom:26px; display:flex; flex-wrap:wrap; gap:10px 0;
+  .routeline{
+    position:absolute; top:18px; right:-40px; width:640px; max-width:70vw; opacity:0.55; z-index:0;
   }
-  .role-line b{color:var(--text); font-weight:500;}
-  .role-line .sep{color:var(--line); margin:0 12px;}
-  .hero-summary{font-size:17px; color:#CDD3D0; max-width:56ch; margin-bottom:34px;}
-  .hero-summary strong{color:var(--text); font-weight:600;}
-  .contact-row{display:flex; flex-wrap:wrap; gap:12px;}
-  .cbtn{
-    display:flex; align-items:center; gap:9px;
-    font-family:'IBM Plex Mono', monospace; font-size:12.5px;
-    padding:11px 16px; border-radius:3px; border:1px solid var(--line);
-    background:var(--panel); color:var(--text); transition:all .2s;
-  }
-  .cbtn:hover{border-color:var(--teal); color:var(--teal); transform:translateY(-1px);}
-  .cbtn.primary{background:var(--amber); border-color:var(--amber); color:#10181C; font-weight:600;}
-  .cbtn.primary:hover{background:#ffbf5c; color:#10181C; transform:translateY(-1px);}
-  .cbtn.whatsapp{border-color:rgba(79,209,197,0.4); color:var(--teal);}
-  .cbtn svg{width:15px; height:15px; flex-shrink:0;}
+  .hero .wrap{ position:relative; z-index:1; }
 
-  /* GAUGE CLUSTER */
-  .cluster{
-    background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:26px;
+  .hero-top{
+    display:flex; align-items:center; gap:14px; margin-bottom:34px;
+  }
+  .hero-top .rule{ flex:1; height:1px; background:var(--line); }
+
+  .boarding-pass{
+    display:grid;
+    grid-template-columns: 1.65fr 1fr;
+    background:linear-gradient(155deg, var(--ink-2), var(--maroon));
+    border:1px solid var(--line);
+    position:relative;
+    box-shadow: 0 30px 80px -30px rgba(0,0,0,0.7);
+  }
+  .boarding-pass::before{
+    /* perforation notches */
+    content:'';
+    position:absolute; top:-14px; left:calc(63% - 14px);
+    width:28px; height:28px; border-radius:50%; background:var(--ink);
+    border:1px solid var(--line);
+  }
+  .boarding-pass::after{
+    content:'';
+    position:absolute; bottom:-14px; left:calc(63% - 14px);
+    width:28px; height:28px; border-radius:50%; background:var(--ink);
+    border:1px solid var(--line);
+  }
+  .bp-main{
+    padding:46px 40px;
+    border-right:1px dashed var(--line);
     position:relative;
   }
-  .cluster::before{
-    content:'FLIGHT-OPS INSTRUMENT PANEL'; position:absolute; top:-11px; left:20px;
-    background:var(--bg); padding:0 8px; font-family:'IBM Plex Mono', monospace; font-size:10px;
-    letter-spacing:0.14em; color:var(--muted);
+  .bp-eyebrow-row{ display:flex; justify-content:space-between; align-items:center; margin-bottom:22px;}
+  .bp-flight{ font-family:'JetBrains Mono',monospace; font-size:0.78rem; color:var(--stone); letter-spacing:0.08em; }
+  .bp-name{
+    font-size:clamp(2.1rem, 5vw, 3.4rem);
+    line-height:1.03;
+    color:var(--pearl);
+    margin-bottom:10px;
   }
-  .gauges{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
-  .gauge-box{background:var(--panel-2); border:1px solid var(--line); border-radius:4px; padding:16px; text-align:center;}
-  .gauge-box svg{width:100%; height:auto; max-width:120px;}
-  .gauge-val{font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:20px; margin-top:6px;}
-  .gauge-label{font-family:'IBM Plex Mono', monospace; font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-top:3px;}
-
-  /* SECTION generic */
-  section{padding:78px 0; border-bottom:1px solid var(--line);}
-  .sec-head{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:44px; flex-wrap:wrap; gap:14px;}
-  .sec-head h2{font-size:32px;}
-  .sec-note{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--muted); max-width:34ch; text-align:right;}
-  @media (max-width:640px){ .sec-note{text-align:left;} }
-
-  /* LOG / EXPERIENCE */
-  .log{border-left:2px solid var(--line); margin-left:6px;}
-  .leg{position:relative; padding:0 0 46px 34px;}
-  .leg:last-child{padding-bottom:0;}
-  .leg::before{
-    content:''; position:absolute; left:-7px; top:2px; width:12px; height:12px; border-radius:50%;
-    background:var(--bg); border:2px solid var(--amber);
+  .bp-name em{ color:var(--gold-bright); font-style:italic; font-weight:400; }
+  .bp-role{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.92rem;
+    color:var(--gold);
+    letter-spacing:0.03em;
+    margin-bottom:22px;
   }
-  .leg-top{display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; margin-bottom:6px;}
-  .leg-role{font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:19px; color:var(--text);}
-  .leg-dates{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--amber); letter-spacing:0.03em; white-space:nowrap;}
-  .leg-org{font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--teal); margin-bottom:14px;}
-  .leg ul{list-style:none; display:flex; flex-direction:column; gap:9px;}
-  .leg li{position:relative; padding-left:20px; color:#CBD1CE; font-size:15px;}
-  .leg li::before{content:'›'; position:absolute; left:0; top:0; color:var(--muted); font-family:'IBM Plex Mono', monospace;}
-  .leg li b{color:var(--text); font-weight:600;}
+  .bp-summary{
+    color:var(--stone);
+    font-size:0.98rem;
+    line-height:1.65;
+    max-width:46ch;
+    margin-bottom:28px;
+  }
+  .bp-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{
+    font-family:'JetBrains Mono',monospace; font-size:0.78rem; letter-spacing:0.05em;
+    padding:12px 20px; border-radius:1px; display:inline-flex; align-items:center; gap:8px;
+    transition:transform .2s ease, background .2s, color .2s, border-color .2s;
+  }
+  .btn-primary{ background:var(--gold); color:var(--ink); border:1px solid var(--gold); }
+  .btn-primary:hover{ background:var(--gold-bright); border-color:var(--gold-bright); transform:translateY(-2px); }
+  .btn-ghost{ border:1px solid var(--line); color:var(--pearl); }
+  .btn-ghost:hover{ border-color:var(--gold); color:var(--gold-bright); transform:translateY(-2px); }
 
-  /* SKILLS */
-  .skill-groups{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
-  @media (max-width:700px){ .skill-groups{grid-template-columns:1fr;} }
-  .skill-card{background:var(--panel); border:1px solid var(--line); border-radius:5px; padding:20px 22px;}
-  .skill-card h3{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--amber); margin-bottom:14px; display:flex; align-items:center; gap:8px;}
-  .chip-row{display:flex; flex-wrap:wrap; gap:8px;}
+  .bp-stub{
+    padding:40px 30px;
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .stub-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px 12px; margin-bottom:26px;}
+  .stub-field .k{ font-family:'JetBrains Mono',monospace; font-size:0.62rem; color:var(--stone-dim); letter-spacing:0.14em; text-transform:uppercase; margin-bottom:5px;}
+  .stub-field .v{ font-family:'JetBrains Mono',monospace; font-size:0.98rem; color:var(--pearl-dim); letter-spacing:0.02em;}
+  .stub-route{
+    display:flex; align-items:center; gap:10px; margin-bottom:22px;
+    font-family:'JetBrains Mono',monospace;
+  }
+  .stub-route .code{ font-size:1.5rem; color:var(--gold-bright); font-weight:700; }
+  .stub-route .city{ font-size:0.62rem; color:var(--stone-dim); letter-spacing:0.06em; text-transform:uppercase;}
+  .stub-route .plane{ width:26px; height:26px; opacity:0.85; }
+
+  .barcode{ display:flex; gap:2px; height:34px; align-items:stretch; margin-bottom:16px;}
+  .barcode span{ background:var(--stone-dim); flex:1; opacity:0.55;}
+  .barcode span:nth-child(3n){ background:var(--gold); opacity:0.85;}
+  .barcode span:nth-child(5n){ flex:2; }
+
+  .seal{
+    position:absolute; right:26px; bottom:-34px; width:112px; height:112px;
+    filter:drop-shadow(0 8px 16px rgba(0,0,0,0.5));
+    transform:rotate(-8deg);
+  }
+
+  @media (max-width: 780px){
+    .boarding-pass{ grid-template-columns:1fr; }
+    .bp-main{ border-right:none; border-bottom:1px dashed var(--line); }
+    .boarding-pass::before, .boarding-pass::after{ left:calc(50% - 14px); }
+    .seal{ display:none; }
+    .routeline{ display:none; }
+  }
+
+  /* ---------- STATS STRIP ---------- */
+  .stats{
+    background:var(--maroon);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .stats-grid{
+    display:grid; grid-template-columns:repeat(4,1fr);
+    padding:34px 0;
+  }
+  .stat{ text-align:center; padding:0 10px; border-right:1px solid var(--line); }
+  .stat:last-child{ border-right:none; }
+  .stat .num{ font-family:'JetBrains Mono',monospace; font-size:clamp(1.5rem,3vw,2.2rem); color:var(--gold-bright); font-weight:700; }
+  .stat .lbl{ font-size:0.72rem; color:var(--stone); letter-spacing:0.03em; margin-top:6px; line-height:1.4;}
+  @media (max-width:700px){
+    .stats-grid{ grid-template-columns:1fr 1fr; }
+    .stat{ padding:14px 6px; border-right:1px solid var(--line); }
+    .stat:nth-child(2n){ border-right:none; }
+  }
+
+  /* ---------- SECTION shared ---------- */
+  section{ padding:88px 0; position:relative; }
+  .sec-head{ display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:44px; gap:20px; flex-wrap:wrap;}
+  .sec-head h2{ font-size:clamp(1.7rem,3.4vw,2.5rem); color:var(--pearl); }
+  .sec-head .num{ font-family:'JetBrains Mono',monospace; color:var(--stone-dim); font-size:0.85rem; }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:60px; align-items:start;}
+  .about-text p{ color:var(--stone); line-height:1.8; font-size:1.02rem; margin-bottom:18px;}
+  .about-text strong{ color:var(--pearl-dim); font-weight:700;}
+  .lang-card{
+    border:1px solid var(--line); padding:26px; background:var(--ink-2);
+  }
+  .lang-card .k{ font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;}
+  .lang-row{ display:flex; justify-content:space-between; font-size:0.92rem; padding:10px 0; border-bottom:1px solid var(--line); color:var(--pearl-dim);}
+  .lang-row:last-child{ border-bottom:none;}
+  .lang-row span.tag{ font-family:'JetBrains Mono',monospace; font-size:0.68rem; color:var(--stone-dim);}
+  @media (max-width:820px){ .about-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- DEPARTURE BOARD (Experience) ---------- */
+  .board{
+    background:#0F0A11;
+    border:1px solid var(--line);
+    padding:0;
+  }
+  .board-head{
+    display:grid; grid-template-columns: 110px 1.4fr 1fr 130px;
+    padding:16px 24px;
+    font-family:'JetBrains Mono',monospace; font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--stone-dim);
+    border-bottom:1px solid var(--line);
+  }
+  .flight-row{
+    border-bottom:1px solid rgba(196,146,27,0.14);
+    opacity:0; transform:translateY(14px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .flight-row.show{ opacity:1; transform:translateY(0); }
+  .flight-row:last-child{ border-bottom:none; }
+  .flight-summary{
+    display:grid; grid-template-columns: 110px 1.4fr 1fr 130px;
+    padding:22px 24px;
+    align-items:center;
+    gap:10px;
+  }
+  .flight-summary .date{ font-family:'JetBrains Mono',monospace; font-size:0.76rem; color:var(--gold); }
+  .flight-summary .role{ color:var(--pearl); font-size:1.04rem; font-weight:700; font-family:'Manrope',sans-serif;}
+  .flight-summary .company{ color:var(--stone); font-size:0.88rem; }
+  .flight-summary .status{
+    font-family:'JetBrains Mono',monospace; font-size:0.66rem; letter-spacing:0.08em; text-transform:uppercase;
+    justify-self:start;
+    padding:5px 10px; border:1px solid var(--gold); color:var(--gold-bright);
+  }
+  .flight-details{ padding:0 24px 26px 24px; }
+  .flight-details ul{ margin:0; padding-left:18px; color:var(--stone); font-size:0.94rem; line-height:1.7; }
+  .flight-details li{ margin-bottom:8px; }
+  .flight-details li::marker{ color:var(--gold); }
+
+  @media (max-width:760px){
+    .board-head{ display:none; }
+    .flight-summary{ grid-template-columns:1fr; gap:6px; }
+    .flight-summary .status{ justify-self:start; margin-top:4px;}
+  }
+
+  /* ---------- SKILLS ---------- */
+  .chips{ display:flex; flex-wrap:wrap; gap:12px; }
   .chip{
-    font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:6px 11px; border-radius:20px;
-    border:1px solid var(--line); color:#CDD3D0; background:var(--panel-2);
+    border:1px solid var(--line); padding:10px 16px; font-size:0.85rem; color:var(--pearl-dim);
+    font-family:'JetBrains Mono',monospace; letter-spacing:0.01em;
+    transition:border-color .2s, color .2s, transform .2s;
+  }
+  .chip:hover{ border-color:var(--gold); color:var(--gold-bright); transform:translateY(-2px); }
+
+  /* ---------- CERT / EDU ---------- */
+  .ticket-grid{ display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+  .ticket{
+    background:var(--ink-2); border:1px solid var(--line); padding:30px 28px; position:relative;
+  }
+  .ticket h3{ font-size:1.2rem; color:var(--pearl); margin-bottom:18px; }
+  .ticket .item{ padding:12px 0; border-top:1px dashed var(--line); }
+  .ticket .item:first-of-type{ border-top:none; }
+  .ticket .item .t{ color:var(--pearl-dim); font-size:0.94rem; font-weight:700;}
+  .ticket .item .d{ color:var(--stone-dim); font-size:0.78rem; font-family:'JetBrains Mono',monospace; margin-top:4px;}
+  @media (max-width:820px){ .ticket-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:linear-gradient(180deg, var(--maroon), var(--ink));
+    border-top:1px solid var(--line);
+  }
+  .contact-head{ text-align:center; max-width:640px; margin:0 auto 50px; }
+  .contact-head .eyebrow{ display:block; margin-bottom:14px; }
+  .contact-head h2{ font-size:clamp(2rem,4.4vw,3rem); margin-bottom:16px; }
+  .contact-head p{ color:var(--stone); font-size:1rem; }
+
+  .contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:56px;}
+  .ccard{
+    border:1px solid var(--line); padding:24px; display:flex; flex-direction:column; gap:14px;
+    transition:border-color .2s, transform .2s; background:rgba(23,17,26,0.4);
+  }
+  .ccard:hover{ border-color:var(--gold); transform:translateY(-3px); }
+  .ccard .icon{ width:26px; height:26px; color:var(--gold-bright); }
+  .ccard .k{ font-family:'JetBrains Mono',monospace; font-size:0.65rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--stone-dim);}
+  .ccard .v{ color:var(--pearl); font-size:0.98rem; word-break:break-word; }
+  .ccard .wa{ font-family:'JetBrains Mono',monospace; font-size:0.66rem; color:var(--gold); letter-spacing:0.06em; }
+  @media (max-width:820px){ .contact-grid{ grid-template-columns:1fr; } }
+
+  .quote-block{
+    text-align:center; padding:50px 20px 10px; border-top:1px solid var(--line); margin-top:10px;
+  }
+  .quote-block .q{
+    font-family:'Fraunces',serif; font-style:italic; font-weight:400;
+    font-size:clamp(1.6rem,4vw,2.6rem); color:var(--gold-bright); letter-spacing:0.01em;
+  }
+  .quote-block .attrib{ margin-top:14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--stone-dim); letter-spacing:0.1em; text-transform:uppercase;}
+
+  footer{
+    text-align:center; padding:28px 20px 40px; font-family:'JetBrains Mono',monospace;
+    font-size:0.7rem; color:var(--stone-dim); letter-spacing:0.05em;
   }
 
-  /* CREDENTIALS */
-  .cred-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
-  @media (max-width:820px){ .cred-grid{grid-template-columns:repeat(2,1fr);} }
-  @media (max-width:560px){ .cred-grid{grid-template-columns:1fr;} }
-  .cred-card{
-    background:var(--panel); border:1px solid var(--line); border-radius:5px; padding:20px;
-    position:relative; overflow:hidden;
-  }
-  .cred-card.inprogress{border-color:rgba(240,101,74,0.5);}
-  .cred-tag{
-    position:absolute; top:0; right:0; font-family:'IBM Plex Mono', monospace; font-size:9px; letter-spacing:0.08em;
-    padding:4px 10px; background:var(--coral); color:#10181C; border-bottom-left-radius:5px; font-weight:600;
-  }
-  .cred-card h4{font-family:'Space Grotesk', sans-serif; font-size:15.5px; margin:6px 26px 8px 0; line-height:1.3;}
-  .cred-meta{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--muted);}
-  .edu-card{background:var(--panel-2); border:1px solid var(--line); border-radius:5px; padding:24px 26px; margin-bottom:22px; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;}
-  .edu-card h3{font-family:'Space Grotesk', sans-serif; font-size:19px; margin-bottom:6px;}
-  .edu-meta{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--teal); margin-bottom:10px;}
-  .edu-course{font-size:14px; color:var(--muted);}
-  .edu-status{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--amber); border:1px solid var(--amber); padding:6px 12px; border-radius:20px; height:fit-content; white-space:nowrap;}
-
-  /* CONTACT FOOTER */
-  footer{padding:86px 0 60px;}
-  .contact-panel{
-    background:linear-gradient(135deg, var(--panel), var(--panel-2));
-    border:1px solid var(--line); border-radius:8px; padding:56px 48px; text-align:center; position:relative; overflow:hidden;
-  }
-  .contact-panel::before{
-    content:''; position:absolute; inset:0; opacity:0.5;
-    background: radial-gradient(circle at 20% 20%, rgba(242,169,60,0.10), transparent 45%), radial-gradient(circle at 85% 80%, rgba(79,209,197,0.10), transparent 45%);
-  }
-  .contact-panel > *{position:relative;}
-  .contact-panel h2{font-size:34px; margin-bottom:14px;}
-  .contact-panel p{color:var(--muted); max-width:50ch; margin:0 auto 34px; font-size:16px;}
-  .contact-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-bottom:30px;}
-  .footer-meta{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--muted); text-align:center; margin-top:40px; letter-spacing:0.03em;}
-  .footer-meta a{color:var(--teal);}
-
-  .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}
-  .reveal.in{opacity:1; transform:translateY(0);}
-
-  @media (prefers-reduced-motion: reduce){
-    *{animation:none !important; transition:none !important;}
-  }
-  @media (max-width:600px){
-    h1.name{font-size:38px;}
-    .sec-head h2{font-size:26px;}
-    section{padding:56px 0;}
-    header.hero{padding:64px 0 48px;}
-    .contact-panel{padding:40px 22px;}
-  }
-  a:focus-visible, button:focus-visible{outline:2px solid var(--teal); outline-offset:3px;}
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.show{ opacity:1; transform:translateY(0); }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="wrap">
-    <div class="brand">S<span>K</span>C <span style="color:var(--muted); font-weight:400;">// portfolio</span></div>
-    <ul class="navlinks">
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#credentials">Credentials</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a class="nav-cta" href="#contact">Get in touch</a>
-  </div>
-</nav>
+<svg class="grain" width="100%" height="100%">
+  <filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter>
+  <rect width="100%" height="100%" filter="url(#n)"/>
+</svg>
 
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="status-pill"><span class="dot"></span> Available for shift-based rosters — public holidays included</div>
-      <h1 class="name">Sylvester Keaton<br><span class="last">Clarke</span></h1>
-      <div class="role-line">
-        <b>Operations &amp; Compliance</b><span class="sep">/</span><b>Records &amp; Administration</b><span class="sep">/</span><b>Team Leadership</b>
-      </div>
-      <p class="hero-summary">
-        Two years spent keeping <strong>shift-based, deadline-driven operations</strong> on target — from running a 15-person advisor team through <strong>15 straight weeks without a missed compliance threshold</strong>, to safeguarding confidential records inside a regulated statutory institution. Currently building toward aviation operations through a Pilot Institute crew resource management &amp; scheduling certification, layered on an existing Private Pilot Ground School credential.
-      </p>
-      <div class="contact-row">
-        <a class="cbtn primary" href="mailto:keatonclarke37@gmail.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>
-          Email
-        </a>
-        <a class="cbtn whatsapp" href="https://wa.me/233204148130" target="_blank" rel="noopener">
-          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.36.65 4.56 1.79 6.45L4 29l7.71-1.75a11.9 11.9 0 0 0 4.31.8C22.63 28.05 28 22.65 28 15.02 28 8.4 22.63 3 16.02 3zm0 21.6c-1.36 0-2.68-.35-3.83-1l-.27-.16-4.57 1.04 1.06-4.44-.18-.29A9.55 9.55 0 0 1 6.5 15.02c0-5.26 4.28-9.55 9.53-9.55 5.24 0 9.5 4.29 9.5 9.55 0 5.27-4.26 9.58-9.51 9.58zm5.24-7.15c-.28-.14-1.67-.82-1.93-.92-.26-.1-.45-.14-.64.14-.19.28-.74.92-.9 1.11-.17.19-.33.21-.62.07-.28-.14-1.2-.44-2.28-1.4-.84-.75-1.41-1.68-1.57-1.96-.17-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.17.19-.28.28-.47.1-.19.05-.35-.02-.5-.07-.14-.64-1.55-.88-2.12-.23-.56-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.35-.26.28-1 .98-1 2.4s1.02 2.78 1.17 2.97c.14.19 2 3.06 4.86 4.29.68.29 1.21.47 1.62.6.68.22 1.3.19 1.79.11.55-.08 1.67-.68 1.9-1.34.24-.66.24-1.22.17-1.34-.07-.12-.26-.19-.54-.33z"/></svg>
-          WhatsApp
-        </a>
-        <a class="cbtn" href="tel:+233204148130">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
-          020 414 8130
-        </a>
-        <a class="cbtn" href="https://linkedin.com/in/keaton-clarke-535616161" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-          LinkedIn
-        </a>
-      </div>
-    </div>
-
-    <div class="cluster reveal">
-      <div class="gauges">
-        <div class="gauge-box">
-          <svg viewBox="0 0 100 60"><path d="M10 55 A40 40 0 0 1 90 55" fill="none" stroke="#2B3A41" stroke-width="8"/><path d="M10 55 A40 40 0 0 1 90 55" fill="none" stroke="#4FD1C5" stroke-width="8" stroke-dasharray="126 126" stroke-dashoffset="0" stroke-linecap="round"/></svg>
-          <div class="gauge-val" style="color:var(--teal)">15/15</div>
-          <div class="gauge-label">Weeks · zero missed targets</div>
-        </div>
-        <div class="gauge-box">
-          <svg viewBox="0 0 100 60"><path d="M10 55 A40 40 0 0 1 90 55" fill="none" stroke="#2B3A41" stroke-width="8"/><path d="M10 55 A40 40 0 0 1 90 55" fill="none" stroke="#F2A93C" stroke-width="8" stroke-dasharray="126 126" stroke-dashoffset="0" stroke-linecap="round"/></svg>
-          <div class="gauge-val" style="color:var(--amber)">100%</div>
-          <div class="gauge-label">CCXU compliance reached</div>
-        </div>
-        <div class="gauge-box">
-          <svg viewBox="0 0 100 60"><path d="M10 55 A40 40 0 0 1 90 55" fill="none" stroke="#2B3A41" stroke-width="8"/><path d="M10 55 A40 40 0 0 1 90 55" fill="none" stroke="#F0654A" stroke-width="8" stroke-dasharray="126 126" stroke-dashoffset="31" stroke-linecap="round"/></svg>
-          <div class="gauge-val" style="color:var(--coral)">45%</div>
-          <div class="gauge-label">Organic traffic growth</div>
-        </div>
-        <div class="gauge-box">
-          <svg viewBox="0 0 100 60"><path d="M10 55 A40 40 0 0 1 90 55" fill="none" stroke="#2B3A41" stroke-width="8"/><path d="M10 55 A40 40 0 0 1 90 55" fill="none" stroke="#4FD1C5" stroke-width="8" stroke-dasharray="126 126" stroke-dashoffset="63" stroke-linecap="round"/></svg>
-          <div class="gauge-val" style="color:var(--teal)">25%</div>
-          <div class="gauge-label">Faster content delivery</div>
-        </div>
-      </div>
-    </div>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-mark"><b>S.K.C.</b> <span style="color:var(--stone-dim)">/ ACC → AUH</span></div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#credentials">Credentials</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Contact</a>
   </div>
 </header>
+
+<section class="hero">
+  <svg class="routeline" viewBox="0 0 640 220" fill="none">
+    <path d="M20 190 C 200 40, 420 40, 610 30" stroke="#C4921B" stroke-width="1" stroke-dasharray="4 8" opacity="0.7"/>
+    <circle cx="20" cy="190" r="4" fill="#E9C568"/>
+    <circle cx="610" cy="30" r="4" fill="#E9C568"/>
+    <g transform="translate(300,68) rotate(-18)">
+      <path d="M0 0 L34 6 L46 0 L34 -6 Z M14 -3 L14 -16 L20 -12 L20 2 Z M14 3 L14 16 L20 12 L20 -2 Z" fill="#E9C568"/>
+    </g>
+  </svg>
+
+  <div class="wrap">
+    <div class="hero-top">
+      <span class="eyebrow">Boarding Pass · Career Transfer</span>
+      <div class="rule"></div>
+      <span class="eyebrow">Accra, Ghana</span>
+    </div>
+
+    <div class="boarding-pass">
+      <div class="bp-main">
+        <div class="bp-eyebrow-row">
+          <span class="bp-flight">FLIGHT SKC · CLASS: OPERATIONS</span>
+        </div>
+        <h1 class="bp-name">Sylvester Keaton<br><em>Clarke</em></h1>
+        <div class="bp-role">DUTY SUPERVISOR CANDIDATE — ETIHAD AIRWAYS, ACCRA</div>
+        <p class="bp-summary">Two years directing shift-based teams to zero missed compliance targets under deadline pressure — now completing aviation-specific training to bring that discipline to airport operations.</p>
+        <div class="bp-actions">
+          <a class="btn btn-primary" href="mailto:keatonclarke37@gmail.com">Email Me</a>
+          <a class="btn btn-ghost" href="https://wa.me/233204148130" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/keaton-c-535616161" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="bp-stub">
+        <div>
+          <div class="stub-route">
+            <span class="code">ACC</span>
+            <svg class="plane" viewBox="0 0 100 24" fill="none"><path d="M2 12 H90 M78 4 L94 12 L78 20" stroke="#E9C568" stroke-width="2"/></svg>
+            <span class="code">AUH</span>
+          </div>
+          <div class="stub-grid">
+            <div class="stub-field"><div class="k">Passenger</div><div class="v">S. K. Clarke</div></div>
+            <div class="stub-field"><div class="k">Seat</div><div class="v">Leadership</div></div>
+            <div class="stub-field"><div class="k">Gate</div><div class="v">Ready</div></div>
+            <div class="stub-field"><div class="k">Status</div><div class="v">Confirmed</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="barcode">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <svg class="seal" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="52" fill="none" stroke="#C4921B" stroke-width="2"/>
+        <circle cx="60" cy="60" r="44" fill="none" stroke="#C4921B" stroke-width="1" stroke-dasharray="2 4"/>
+        <path id="curve" d="M 16,60 A 44,44 0 1,1 104,60" fill="none"/>
+        <text font-family="JetBrains Mono, monospace" font-size="8.2" fill="#E9C568" letter-spacing="1.5">
+          <textPath href="#curve" startOffset="2">LIVE FULL &#8226; DIE EMPTY &#8226;</textPath>
+        </text>
+        <g transform="translate(48,50)">
+          <path d="M0 12 L24 12 M18 6 L30 12 L18 18" stroke="#C4921B" stroke-width="1.6" fill="none"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><div class="num">15/15</div><div class="lbl">Consecutive weeks,<br>zero missed targets</div></div>
+    <div class="stat"><div class="num">15+</div><div class="lbl">Advisors led<br>through daily shift ops</div></div>
+    <div class="stat"><div class="num">5</div><div class="lbl">Core compliance<br>thresholds sustained</div></div>
+    <div class="stat"><div class="num">2yrs</div><div class="lbl">Shift-based<br>operations leadership</div></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>About</h2>
+      <span class="num">01 / SUMMARY</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Safety-conscious operations professional with <strong>two years of experience directing shift-based teams</strong> to consistent performance and regulatory compliance in deadline-driven, service-critical environments.</p>
+        <p>Delivered a <strong>15-consecutive-week run with zero missed compliance targets</strong> across five core thresholds while supervising a 15-plus person team, and maintained a confidential records system inside a regulated statutory institution with strict discretion.</p>
+        <p>Led real-time responses to a <strong>company-wide system outage</strong> and a <strong>customer medical emergency</strong>, coordinating cross-functionally with senior leadership, quality assurance, and external parties under pressure to reach fast, compliant resolutions.</p>
+        <p>Currently completing a <strong>Pilot Institute course in crew resource management and scheduling</strong> alongside an aviation certification — deliberate preparation for the transition into airport operations.</p>
+      </div>
+      <div class="lang-card reveal">
+        <div class="k">Languages</div>
+        <div class="lang-row"><span>English</span><span class="tag">FLUENT</span></div>
+        <div class="lang-row"><span>Akan (Twi)</span><span class="tag">FLUENT</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="experience">
   <div class="wrap">
     <div class="sec-head">
-      <div>
-        <div class="eyebrow">Work history</div>
-        <h2>Operational log</h2>
-      </div>
-      <div class="sec-note">Four roles across service operations, records, and content — each logged with dates and outcomes.</div>
+      <h2>Flight History</h2>
+      <span class="num">02 / EXPERIENCE</span>
     </div>
 
-    <div class="log">
-      <div class="leg reveal">
-        <div class="leg-top">
-          <div class="leg-role">Team Leader</div>
-          <div class="leg-dates">DEC 2024 → APR 2026</div>
-        </div>
-        <div class="leg-org">Concentrix · Ridge–Accra</div>
-        <ul>
-          <li>Directed a <b>15-plus person advisor team</b> to meet all 5 core performance and compliance thresholds without a single missed target across <b>15 consecutive weeks</b>, resulting in 3 team members earning promotion into permanent management roles.</li>
-          <li>Coached two newly onboarded advisors through a formal Performance Suggestion Plan, raising RAP to <b>91%</b> and CCXU to <b>100%</b> within four weeks — exceeding the 90%/92% thresholds.</li>
-          <li>Delivered monthly performance reports and targeted coaching to a 15-person team, keeping performance aligned to organizational targets.</li>
-          <li>Reduced absenteeism and raised morale by launching engagement initiatives alongside daily shift operations.</li>
-        </ul>
+    <div class="board">
+      <div class="board-head">
+        <div>DATE</div><div>ROLE</div><div>COMPANY</div><div>STATUS</div>
       </div>
 
-      <div class="leg reveal">
-        <div class="leg-top">
-          <div class="leg-role">Customer Service Advisor</div>
-          <div class="leg-dates">APR 2024 → DEC 2024</div>
+      <div class="flight-row">
+        <div class="flight-summary">
+          <div class="date">2024–2026</div>
+          <div class="role">Team Leader</div>
+          <div class="company">Concentrix, Ridge-Accra</div>
+          <div class="status">Landed</div>
         </div>
-        <div class="leg-org">Concentrix · Ridge–Accra</div>
-        <ul>
-          <li>Maintained a <b>7-minute average handle time</b> across a department volume of 65 calls per day, supporting consistent attainment of service-level targets.</li>
-          <li>Tracked AHT and RAP compliance metrics daily, contributing to department-wide performance goals.</li>
-          <li>Resolved customer inquiries and escalations across phone, email, and chat, improving satisfaction scores.</li>
-        </ul>
+        <div class="flight-details">
+          <ul>
+            <li>Directed a 15-plus person advisor team through daily shift operations, sustaining all 5 core performance and compliance thresholds without a single missed target across 15 consecutive weeks — a result that led to 3 team members earning promotion into permanent management roles.</li>
+            <li>Led the team's real-time response to a company-wide system outage affecting order placement and tracking: deployed two agents to proactively call affected customers, then escalated a compliant compensation plan to senior leadership and QA for same-day sign-off — later adopted as the team's standard outage protocol.</li>
+            <li>Took direct control of an escalated call during a customer medical emergency, coordinating in real time with the delivery driver and emergency services, then personally issued a full refund and written follow-up apology.</li>
+            <li>Covered rotating night, weekend, and holiday shifts, including all-hands coverage during unplanned volume surges, balancing escalated calls, real-time client updates, and AHT targets simultaneously.</li>
+            <li>Coached two newly onboarded advisors through a formal Performance Suggestion Plan, raising compliance metrics to 91% and 100% within four consecutive weeks, exceeding the 90%/92% regulatory thresholds.</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="leg reveal">
-        <div class="leg-top">
-          <div class="leg-role">Graphics and Content Manager</div>
-          <div class="leg-dates">JAN 2021 → MAR 2024</div>
+      <div class="flight-row">
+        <div class="flight-summary">
+          <div class="date">Apr–Dec 2024</div>
+          <div class="role">Customer Service Advisor</div>
+          <div class="company">Concentrix, Ridge-Accra</div>
+          <div class="status">Landed</div>
         </div>
-        <div class="leg-org">Native X Media Limited · South LA Estate–Accra</div>
-        <ul>
-          <li>Cut content delivery time by <b>25%</b> by streamlining editorial workflows and production calendars aligned to business objectives.</li>
-          <li>Grew organic traffic by <b>45%</b> and campaign engagement by <b>30%</b> through an SEO-driven content strategy built with cross-functional teams.</li>
-          <li>Directed and mentored a small creative team, coordinating designers, developers, and external stakeholders for on-time, on-brand delivery.</li>
-        </ul>
+        <div class="flight-details">
+          <ul>
+            <li>Maintained a 7-minute average call handle time across a department volume of 65 calls per day by applying structured problem-solving, supporting consistent attainment of service-level targets.</li>
+            <li>Resolved customer inquiries and escalations in real time across phone, email, and chat channels under service-level pressure, improving customer satisfaction scores.</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="leg reveal">
-        <div class="leg-top">
-          <div class="leg-role">Administrative Intern</div>
-          <div class="leg-dates">JUN 2018 → DEC 2018</div>
+      <div class="flight-row">
+        <div class="flight-summary">
+          <div class="date">2021–2024</div>
+          <div class="role">Graphics &amp; Content Manager</div>
+          <div class="company">Native X Media Ltd, Accra</div>
+          <div class="status">Landed</div>
         </div>
-        <div class="leg-org">Social Security and National Insurance Trust (SSNIT) · Accra</div>
-        <ul>
-          <li>Maintained a <b>confidential records system</b> for personnel and institutional data with strict discretion inside a statutory pension institution, ensuring full compliance with recordkeeping standards.</li>
-          <li>Streamlined document organization through filing, scanning, and recordkeeping, improving daily office efficiency.</li>
-          <li>Coordinated internal meeting scheduling, agenda preparation, and minute-taking, keeping cross-team communication on track.</li>
-          <li>Gained direct exposure to institutional compliance procedures by shadowing SSNIT professionals across daily regulatory operations.</li>
-        </ul>
+        <div class="flight-details">
+          <ul>
+            <li>Streamlined editorial workflows and production calendars aligned to business objectives, cutting content delivery time by 25%.</li>
+            <li>Directed and mentored a small creative team while coordinating designers, developers, and external stakeholders, ensuring on-time, on-brand delivery across all managed projects and budgets.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flight-row">
+        <div class="flight-summary">
+          <div class="date">Jun–Dec 2018</div>
+          <div class="role">Administrative Intern</div>
+          <div class="company">SSNIT, Accra</div>
+          <div class="status">Landed</div>
+        </div>
+        <div class="flight-details">
+          <ul>
+            <li>Maintained a confidential records system for personnel and institutional data with strict discretion inside a regulated statutory pension institution, ensuring full compliance with recordkeeping and data-handling standards.</li>
+            <li>Coordinated internal meeting scheduling, agenda preparation, and minute-taking, keeping cross-team communication with senior staff clear and on track.</li>
+            <li>Gained direct exposure to institutional compliance procedures by shadowing SSNIT professionals across daily regulatory operations.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -359,46 +565,21 @@
 <section id="skills">
   <div class="wrap">
     <div class="sec-head">
-      <div>
-        <div class="eyebrow">Core skills</div>
-        <h2>Systems &amp; capabilities</h2>
-      </div>
-      <div class="sec-note">Grouped by the four systems every one of these roles runs on.</div>
+      <h2>Core Skills</h2>
+      <span class="num">03 / CAPABILITIES</span>
     </div>
-
-    <div class="skill-groups">
-      <div class="skill-card">
-        <h3>◆ Compliance &amp; records</h3>
-        <div class="chip-row">
-          <span class="chip">Regulatory compliance monitoring</span>
-          <span class="chip">Records management &amp; confidentiality</span>
-          <span class="chip">Performance reporting &amp; data analysis</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h3>◆ Scheduling &amp; coordination</h3>
-        <div class="chip-row">
-          <span class="chip">Schedule &amp; shift coordination</span>
-          <span class="chip">Administrative coordination</span>
-          <span class="chip">Deadline-driven operations</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h3>◆ People &amp; communication</h3>
-        <div class="chip-row">
-          <span class="chip">Team leadership &amp; coaching</span>
-          <span class="chip">Cross-functional liaison</span>
-          <span class="chip">Active listening</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h3>◆ Process &amp; analysis</h3>
-        <div class="chip-row">
-          <span class="chip">Process optimization</span>
-          <span class="chip">Time management &amp; prioritization</span>
-          <span class="chip">Analytical thinking</span>
-        </div>
-      </div>
+    <div class="chips reveal">
+      <span class="chip">Shift-Based Operations Supervision</span>
+      <span class="chip">Emergency &amp; Crisis Response</span>
+      <span class="chip">Regulatory Compliance Monitoring &amp; Reporting</span>
+      <span class="chip">Real-Time Decision-Making Under Pressure</span>
+      <span class="chip">Records Management &amp; Confidentiality</span>
+      <span class="chip">Cross-Functional Stakeholder Liaison</span>
+      <span class="chip">Escalation Management</span>
+      <span class="chip">Team Leadership &amp; Coaching</span>
+      <span class="chip">Deadline-Driven Operations Management</span>
+      <span class="chip">Process Improvement</span>
+      <span class="chip">Time Management &amp; Prioritization</span>
     </div>
   </div>
 </section>
@@ -406,79 +587,84 @@
 <section id="credentials">
   <div class="wrap">
     <div class="sec-head">
-      <div>
-        <div class="eyebrow">Education &amp; certifications</div>
-        <h2>Credentials on file</h2>
-      </div>
-      <div class="sec-note">Degree in progress, plus six certifications spanning aviation, networking, and cybersecurity policy.</div>
+      <h2>Credentials</h2>
+      <span class="num">04 / CERTIFICATIONS &amp; EDUCATION</span>
     </div>
-
-    <div class="edu-card">
-      <div>
-        <h3>B.Sc. Information Technology</h3>
-        <div class="edu-meta">University of Ghana, Accra</div>
-        <div class="edu-course">Coursework: E-Business Architectures · Multimedia &amp; Website Design · Data Structures &amp; Algorithms</div>
+    <div class="ticket-grid">
+      <div class="ticket reveal">
+        <h3>Certifications</h3>
+        <div class="item"><div class="t">Crew Resource Management, Scheduling &amp; Aviation Certification</div><div class="d">Pilot Institute — In Progress</div></div>
+        <div class="item"><div class="t">Private Pilot Ground School: Aviation</div><div class="d">Pilot Institute — Jan 2024, Arizona, US</div></div>
+        <div class="item"><div class="t">Cybersecurity Policy for Aviation &amp; Internet Infrastructure</div><div class="d">Georgia Tech / Univ. of Colorado, via Coursera — 2020–2021</div></div>
+        <div class="item"><div class="t">HCIA-Datacom: Computer Networks</div><div class="d">Huawei Enterprise — 2026, Accra</div></div>
+        <div class="item"><div class="t">Computer Networks</div><div class="d">Huawei Enterprise — Sep 2021, Accra</div></div>
       </div>
-      <div class="edu-status">Expected May 2027</div>
-    </div>
-
-    <div class="cred-grid">
-      <div class="cred-card inprogress">
-        <span class="cred-tag">In progress</span>
-        <h4>Crew Resource Management, Scheduling &amp; Aviation Certification</h4>
-        <div class="cred-meta">Pilot Institute</div>
-      </div>
-      <div class="cred-card">
-        <h4>Private Pilot Ground School: Aviation</h4>
-        <div class="cred-meta">Pilot Institute · Jan 2024, Arizona US</div>
-      </div>
-      <div class="cred-card">
-        <h4>HCIA-Datacom: Computer Networks</h4>
-        <div class="cred-meta">Huawei Enterprise · 2026, Accra</div>
-      </div>
-      <div class="cred-card">
-        <h4>Cybersecurity Policy for Aviation &amp; Internet Infrastructure</h4>
-        <div class="cred-meta">Georgia Institute of Technology · Oct 2021</div>
-      </div>
-      <div class="cred-card">
-        <h4>Cybersecurity Policy for Aviation &amp; Internet Infrastructure</h4>
-        <div class="cred-meta">University of Colorado System, via Coursera · Dec 2020</div>
-      </div>
-      <div class="cred-card">
-        <h4>Computer Networks</h4>
-        <div class="cred-meta">Huawei Enterprise · Sep 2021, Accra</div>
+      <div class="ticket reveal">
+        <h3>Education</h3>
+        <div class="item"><div class="t">B.Sc. Information Technology</div><div class="d">University of Ghana — Expected May 2027</div></div>
+        <div class="item"><div class="t">Relevant coursework</div><div class="d">E-Business Architectures · Multimedia &amp; Web Design · Data Structures &amp; Algorithms</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<footer id="contact">
+<section id="contact" class="contact">
   <div class="wrap">
-    <div class="contact-panel reveal">
-      <div class="eyebrow" style="justify-content:center;">Get in touch</div>
-      <h2>Let's talk about the role.</h2>
-      <p>Open to shift-based rosters, including public holidays. Reachable by email, phone, or WhatsApp — whichever gets a faster answer.</p>
-      <div class="contact-grid">
-        <a class="cbtn primary" href="mailto:keatonclarke37@gmail.com">keatonclarke37@gmail.com</a>
-        <a class="cbtn" href="mailto:clarkekeaton75@gmail.com">clarkekeaton75@gmail.com</a>
-      </div>
-      <div class="contact-grid">
-        <a class="cbtn whatsapp" href="https://wa.me/233204148130" target="_blank" rel="noopener">WhatsApp · 020 414 8130</a>
-        <a class="cbtn whatsapp" href="https://wa.me/233594949743" target="_blank" rel="noopener">WhatsApp · 059 494 9743</a>
-        <a class="cbtn" href="tel:+233594949743">Call · 059 494 9743</a>
-        <a class="cbtn" href="https://linkedin.com/in/keaton-clarke-535616161" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+    <div class="contact-head">
+      <span class="eyebrow">Final Call</span>
+      <h2>Ready for Departure</h2>
+      <p>Available for shift-based rosters, including public holidays. Reach out directly — both numbers are active on WhatsApp.</p>
     </div>
-    <div class="footer-meta">Accra, Greater Accra, Ghana · English, Akan (Twi) · Built as a living portfolio — last updated Aug 2026</div>
+
+    <div class="contact-grid">
+      <a class="ccard" href="mailto:keatonclarke37@gmail.com">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>
+        <div class="k">Email — Primary</div>
+        <div class="v">keatonclarke37@gmail.com</div>
+      </a>
+      <a class="ccard" href="mailto:clarkekeaton75@gmail.com">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>
+        <div class="k">Email — Secondary</div>
+        <div class="v">clarkekeaton75@gmail.com</div>
+      </a>
+      <a class="ccard" href="https://www.linkedin.com/in/keaton-c-535616161" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-3a2 2 0 0 1 4 0v3M12 13v3"/></svg>
+        <div class="k">LinkedIn</div>
+        <div class="v">linkedin.com/in/keaton-c-535616161</div>
+      </a>
+      <a class="ccard" href="tel:+233204148130">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.5 2.1L8 10.1a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .7a2 2 0 0 1 1.7 2z"/></svg>
+        <div class="k">Mobile — Primary</div>
+        <div class="v">+233 20 414 8130</div>
+        <div class="wa">✓ Active on WhatsApp</div>
+      </a>
+      <a class="ccard" href="tel:+233594949743">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.5 2.1L8 10.1a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .7a2 2 0 0 1 1.7 2z"/></svg>
+        <div class="k">Mobile — Secondary</div>
+        <div class="v">+233 59 494 9743</div>
+        <div class="wa">✓ Active on WhatsApp</div>
+      </a>
+      <a class="ccard" href="https://wa.me/233204148130" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 20l1.1-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>
+        <div class="k">Message directly</div>
+        <div class="v">Chat on WhatsApp</div>
+      </a>
+    </div>
+
+    <div class="quote-block">
+      <div class="q">"Live Full&hellip; Die Empty"</div>
+      <div class="attrib">Sylvester Keaton Clarke</div>
+    </div>
   </div>
-</footer>
+</section>
+
+<footer>Accra, Ghana &middot; Built for a career in the air</footer>
 
 <script>
-  const els = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); } });
   }, {threshold:0.15});
-  els.forEach(el=>io.observe(el));
+  document.querySelectorAll('.reveal, .flight-row').forEach(el=>io.observe(el));
 </script>
 
 </body>
