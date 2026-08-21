@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keaton Clarke — Portfolio</title>
+<meta name="description" content="Keaton Clarke — Aviation, Renewable Energy, AI & Machinery, Real Estate & Tourism, Farming & Food Production.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15130f;
+    --ink-soft:#2b2620;
+    --cream:#f7f2e7;
+    --cream-dim:#ece4d2;
+    --gold:#c6a15a;
+    --gold-light:#e3c584;
+    --gold-dark:#8a6b39;
+    --stone:#8d8577;
+    --line: rgba(21,19,15,0.12);
+    --line-light: rgba(247,242,231,0.18);
+    --radius: 2px;
+    --serif: 'Fraunces', serif;
+    --sans: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  ::selection{background:var(--gold); color:var(--ink);}
+
+  /* ---------- Nav ---------- */
+  header.nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(21,19,15,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-light);
+  }
+  .nav-inner{
+    max-width:1180px; margin:0 auto; padding:18px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+    color:var(--cream);
+  }
+  .nav-brand{
+    font-family:var(--mono); font-size:13px; letter-spacing:.18em;
+    color:var(--gold-light); display:flex; align-items:center; gap:10px;
+  }
+  .nav-brand .dot{width:6px;height:6px;border-radius:50%;background:var(--gold); display:inline-block;}
+  .nav-links{display:flex; gap:34px; font-size:13px; letter-spacing:.06em; text-transform:uppercase;}
+  .nav-links a{opacity:.75; transition:opacity .2s, color .2s; position:relative;}
+  .nav-links a:hover{opacity:1; color:var(--gold-light);}
+  .nav-toggle{display:none;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative; min-height:100vh;
+    display:flex; align-items:flex-end;
+    background:linear-gradient(180deg, rgba(21,19,15,.35) 0%, rgba(21,19,15,.55) 55%, var(--ink) 100%), url('images/hero.jpeg') center 18% / cover no-repeat;
+    color:var(--cream);
+  }
+  .hero-route{
+    position:absolute; top:130px; left:0; right:0;
+    display:flex; align-items:center; justify-content:center; gap:18px;
+    font-family:var(--mono); font-size:12px; letter-spacing:.3em; color:var(--gold-light);
+    opacity:.85;
+  }
+  .hero-route .line{height:1px; width:120px; background:linear-gradient(90deg, transparent, var(--gold-light), transparent);}
+  .hero-inner{ width:100%; padding:0 32px 90px; max-width:1180px; margin:0 auto;}
+  .eyebrow{
+    font-family:var(--mono); font-size:12px; letter-spacing:.28em; text-transform:uppercase;
+    color:var(--gold-light); margin-bottom:22px; display:flex; align-items:center; gap:12px;
+  }
+  .eyebrow::before{content:''; width:26px; height:1px; background:var(--gold-light);}
+  h1.hero-title{
+    font-family:var(--serif); font-weight:600; font-size:clamp(48px,8vw,104px);
+    line-height:0.98; letter-spacing:-0.01em; max-width:900px;
+  }
+  .hero-quote{
+    font-family:var(--serif); font-style:italic; font-weight:500; font-size:clamp(20px,2.4vw,28px);
+    color:var(--gold-light); margin-top:28px; letter-spacing:.01em;
+  }
+  .hero-cta{display:flex; gap:16px; margin-top:44px; flex-wrap:wrap;}
+  .btn{
+    font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    padding:15px 26px; border:1px solid var(--gold); border-radius:var(--radius);
+    display:inline-flex; align-items:center; gap:10px; transition:all .25s ease;
+  }
+  .btn-solid{background:var(--gold); color:var(--ink);}
+  .btn-solid:hover{background:var(--gold-light); transform:translateY(-2px);}
+  .btn-ghost{color:var(--cream); border-color:var(--line-light);}
+  .btn-ghost:hover{border-color:var(--gold); color:var(--gold-light); transform:translateY(-2px);}
+
+  /* ---------- Section shell ---------- */
+  section{padding:120px 0; position:relative;}
+  .section-head{margin-bottom:64px; max-width:640px;}
+  .section-head .eyebrow{color:var(--gold-dark);}
+  .section-head .eyebrow::before{background:var(--gold-dark);}
+  h2{font-family:var(--serif); font-weight:600; font-size:clamp(34px,4.2vw,54px); letter-spacing:-.01em;}
+  .lede{color:var(--ink-soft); font-size:17px; margin-top:16px; max-width:560px;}
+
+  /* ---------- About ---------- */
+  #about{background:var(--cream);}
+  .about-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:70px; align-items:start;}
+  .about-photo{position:relative;}
+  .about-photo img{width:100%; filter:grayscale(1) contrast(1.05); border:1px solid var(--line);}
+  .about-photo .tag{
+    position:absolute; bottom:-18px; left:-18px; background:var(--ink); color:var(--gold-light);
+    font-family:var(--mono); font-size:11px; letter-spacing:.14em; padding:10px 16px; border:1px solid var(--gold-dark);
+  }
+  .about-body p{margin-bottom:18px; color:var(--ink-soft); font-size:16px;}
+  .values{margin-top:32px; padding-top:28px; border-top:1px solid var(--line);}
+  .values h4{font-family:var(--mono); font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-dark); margin-bottom:12px;}
+  .values p{color:var(--ink-soft); font-size:15px; margin-bottom:0;}
+
+  /* ---------- Boarding passes (passions) ---------- */
+  #passions{background:var(--ink); color:var(--cream);}
+  #passions .section-head .eyebrow{color:var(--gold-light);}
+  #passions .section-head .eyebrow::before{background:var(--gold-light);}
+  #passions h2{color:var(--cream);}
+  #passions .lede{color:#c9c2b3;}
+  .pass-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px;}
+  .pass{
+    border:1px solid var(--line-light); border-radius:var(--radius);
+    background:linear-gradient(180deg, rgba(247,242,231,.04), rgba(247,242,231,.01));
+    padding:26px 24px; position:relative; overflow:hidden;
+    transition:border-color .25s ease, transform .25s ease;
+  }
+  .pass:hover{border-color:var(--gold); transform:translateY(-4px);}
+  .pass::after{
+    content:''; position:absolute; right:-10px; top:50%; width:20px; height:20px;
+    border-radius:50%; background:var(--ink); border:1px solid var(--line-light); transform:translateY(-50%);
+  }
+  .pass-row{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;}
+  .pass-code{font-family:var(--mono); font-size:34px; letter-spacing:.02em; color:var(--gold-light);}
+  .pass-arrow{font-family:var(--mono); font-size:13px; color:var(--stone); margin:0 10px;}
+  .pass-num{font-family:var(--mono); font-size:11px; color:var(--stone); letter-spacing:.1em;}
+  .pass-title{font-family:var(--serif); font-size:21px; font-weight:600; margin-bottom:8px;}
+  .pass-desc{font-size:14px; color:#c9c2b3;}
+  .pass-foot{
+    margin-top:20px; padding-top:16px; border-top:1px dashed var(--line-light);
+    display:flex; justify-content:space-between; font-family:var(--mono); font-size:10px; letter-spacing:.1em; color:var(--stone); text-transform:uppercase;
+  }
+
+  /* ---------- Departure board (interests/hobbies) ---------- */
+  #interests{background:var(--cream);}
+  .board{
+    background:var(--ink); border:1px solid var(--gold-dark); border-radius:var(--radius);
+    padding:10px 0; overflow:hidden;
+  }
+  .board-row{
+    display:grid; grid-template-columns:110px 1fr 160px 130px; gap:18px; align-items:center;
+    padding:20px 28px; border-bottom:1px solid rgba(247,242,231,.08); color:var(--cream);
+    font-family:var(--mono); font-size:13px; letter-spacing:.04em;
+  }
+  .board-row:last-child{border-bottom:none;}
+  .board-row .flip{color:var(--gold-light); font-weight:700; letter-spacing:.12em;}
+  .board-row .desc{color:#b9b2a2; font-family:var(--sans); font-size:14px; letter-spacing:0;}
+  .board-row .status{color:var(--gold); text-transform:uppercase; text-align:right;}
+  .board-head{
+    display:grid; grid-template-columns:110px 1fr 160px 130px; gap:18px;
+    padding:14px 28px; font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--gold-dark); border-bottom:1px solid var(--gold-dark);
+  }
+
+  /* ---------- Gallery ---------- */
+  #gallery{background:var(--cream); padding-top:0;}
+  .gallery-strip{display:grid; grid-template-columns:repeat(3,1fr); gap:4px;}
+  .gallery-strip figure{position:relative; overflow:hidden; aspect-ratio:3/4;}
+  .gallery-strip img{width:100%; height:100%; object-fit:cover; filter:grayscale(.5); transition:filter .4s ease, transform .5s ease;}
+  .gallery-strip figure:hover img{filter:grayscale(0); transform:scale(1.04);}
+  .gallery-strip figcaption{
+    position:absolute; left:0; right:0; bottom:0; padding:14px 16px;
+    background:linear-gradient(0deg, rgba(21,19,15,.85), transparent);
+    color:var(--gold-light); font-family:var(--mono); font-size:11px; letter-spacing:.1em;
+  }
+
+  /* ---------- Contact ---------- */
+  #contact{background:var(--ink); color:var(--cream);}
+  #contact .section-head .eyebrow{color:var(--gold-light);}
+  #contact .section-head .eyebrow::before{background:var(--gold-light);}
+  #contact h2{color:var(--cream);}
+  .crew-card{
+    border:1px solid var(--gold-dark); border-radius:var(--radius);
+    display:grid; grid-template-columns:1.2fr 1fr; overflow:hidden;
+  }
+  .crew-main{padding:44px; border-right:1px dashed var(--line-light);}
+  .crew-main .name{font-family:var(--serif); font-size:30px; font-weight:600; margin-bottom:6px;}
+  .crew-main .role{font-family:var(--mono); font-size:12px; letter-spacing:.14em; color:var(--gold-light); text-transform:uppercase; margin-bottom:28px;}
+  .contact-item{display:flex; flex-direction:column; gap:2px; margin-bottom:20px;}
+  .contact-item .label{font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--stone);}
+  .contact-item .val{font-size:16px;}
+  .contact-item a:hover{color:var(--gold-light);}
+  .crew-side{padding:44px; display:flex; flex-direction:column; justify-content:space-between; background:rgba(247,242,231,.03);}
+  .barcode{
+    height:46px; background:repeating-linear-gradient(90deg, var(--gold-light) 0 2px, transparent 2px 5px, var(--gold-dark) 5px 6px, transparent 6px 9px);
+    opacity:.7; margin-bottom:14px;
+  }
+  .crew-side .boarding{font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--stone);}
+  .crew-side .motto{font-family:var(--serif); font-style:italic; font-size:22px; color:var(--gold-light); margin-top:24px;}
+  .whatsapp-note{font-family:var(--mono); font-size:11px; color:var(--gold-dark); margin-top:6px; letter-spacing:.05em;}
+
+  footer{padding:36px 0; background:var(--ink); border-top:1px solid var(--line-light); color:var(--stone); text-align:center; font-family:var(--mono); font-size:11px; letter-spacing:.1em;}
+
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .about-grid{grid-template-columns:1fr;}
+    .crew-card{grid-template-columns:1fr;}
+    .crew-main{border-right:none; border-bottom:1px dashed var(--line-light);}
+    .board-row, .board-head{grid-template-columns:70px 1fr 90px;}
+    .board-row .status, .board-head > :last-child{display:none;}
+    .gallery-strip{grid-template-columns:repeat(2,1fr);}
+    .hero-route{display:none;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><span class="dot"></span>KEATON CLARKE</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#passions">Passions</a>
+      <a href="#interests">Interests</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-route"><span class="line"></span>ACC — CRUISING ALTITUDE — DESTINATION: NEXT<span class="line"></span></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Portfolio · Est. 2026</div>
+    <h1 class="hero-title">Keaton<br>Clarke</h1>
+    <p class="hero-quote">"Live Full... Die Empty"</p>
+    <div class="hero-cta">
+      <a class="btn btn-solid" href="#contact">Get in Touch</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/keaton-c-535616161" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="images/lounge.jpeg" alt="Keaton Clarke seated in a hotel lounge">
+        <div class="tag">BOARDING · SEAT 1A</div>
+      </div>
+      <div class="about-body">
+        <div class="section-head" style="margin-bottom:28px;">
+          <div class="eyebrow">About Me</div>
+          <h2>Grounded in curiosity,<br>built for altitude.</h2>
+        </div>
+        <p>I'm Keaton — drawn to industries where precision and ambition meet: aviation, energy, technology, and the built world. I move between boardroom and runway thinking with the same discipline pilots bring to a pre-flight checklist: prepare thoroughly, respect the systems, and commit fully once cleared for takeoff.</p>
+        <p>Outside of work, I chase adrenaline the way I chase ideas — behind the wheel of a Formula 1 broadcast, freefalling from altitude, or descending into open water. I also host conversations on wealth, health and family, because I believe a good life is built the same way a good flight plan is: intentionally, and one leg at a time.</p>
+        <div class="values">
+          <h4>Grounded In</h4>
+          <p>My outlook is shaped by faith — a deep, ongoing study of Christianity — paired with real respect for people who walk different spiritual paths. I'd rather build bridges than borders.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="passions">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Flight Manifest</div>
+      <h2>Where my attention is cleared to land</h2>
+      <p class="lede">Five industries I track, study and build toward — each boarding its own trajectory.</p>
+    </div>
+    <div class="pass-grid">
+
+      <div class="pass">
+        <div class="pass-row">
+          <div><div class="pass-code">AVN</div><div class="pass-num">GATE 01</div></div>
+          <div class="pass-arrow">✈</div>
+        </div>
+        <div class="pass-title">Aviation</div>
+        <div class="pass-desc">The industry that shaped how I think about systems, safety, and scale — my north star.</div>
+        <div class="pass-foot"><span>Class · First</span><span>Status · Boarding</span></div>
+      </div>
+
+      <div class="pass">
+        <div class="pass-row">
+          <div><div class="pass-code">NRG</div><div class="pass-num">GATE 02</div></div>
+          <div class="pass-arrow">✈</div>
+        </div>
+        <div class="pass-title">Renewable Energy</div>
+        <div class="pass-desc">Backing the infrastructure that will power the next century responsibly.</div>
+        <div class="pass-foot"><span>Class · First</span><span>Status · Boarding</span></div>
+      </div>
+
+      <div class="pass">
+        <div class="pass-row">
+          <div><div class="pass-code">A.I</div><div class="pass-num">GATE 03</div></div>
+          <div class="pass-arrow">✈</div>
+        </div>
+        <div class="pass-title">AI & Machinery</div>
+        <div class="pass-desc">Fascinated by intelligent systems and the machinery that puts them to work.</div>
+        <div class="pass-foot"><span>Class · First</span><span>Status · Boarding</span></div>
+      </div>
+
+      <div class="pass">
+        <div class="pass-row">
+          <div><div class="pass-code">RLT</div><div class="pass-num">GATE 04</div></div>
+          <div class="pass-arrow">✈</div>
+        </div>
+        <div class="pass-title">Real Estate & Tourism</div>
+        <div class="pass-desc">Building destinations and spaces worth the journey.</div>
+        <div class="pass-foot"><span>Class · First</span><span>Status · Boarding</span></div>
+      </div>
+
+      <div class="pass">
+        <div class="pass-row">
+          <div><div class="pass-code">FRM</div><div class="pass-num">GATE 05</div></div>
+          <div class="pass-arrow">✈</div>
+        </div>
+        <div class="pass-title">Farming & Food Production</div>
+        <div class="pass-desc">Investing in the ground-level systems that feed everything above them.</div>
+        <div class="pass-foot"><span>Class · First</span><span>Status · Boarding</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="interests">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Departures</div>
+      <h2>Interests &amp; hobbies</h2>
+      <p class="lede">A running board of what keeps me moving off the clock.</p>
+    </div>
+    <div class="board">
+      <div class="board-head"><span>Code</span><span>Interest / Hobby</span><span>Category</span><span>Status</span></div>
+      <div class="board-row"><span class="flip">F1</span><span class="desc">Formula 1 — race weekends, strategy, the engineering arms race</span><span>Interest</span><span class="status">On Time</span></div>
+      <div class="board-row"><span class="flip">SKY</span><span class="desc">Skydiving — chasing freefall and the view from altitude</span><span>Extreme Sport</span><span class="status">On Time</span></div>
+      <div class="board-row"><span class="flip">SUB</span><span class="desc">Scuba Diving — descending into open water</span><span>Extreme Sport</span><span class="status">On Time</span></div>
+      <div class="board-row"><span class="flip">POD</span><span class="desc">Podcasting — conversations on wealth, health &amp; family</span><span>Hobby</span><span class="status">Boarding</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Gallery</div>
+      <h2>On and off duty</h2>
+    </div>
+  </div>
+  <div class="gallery-strip">
+    <figure><img src="images/casual.jpeg" alt="Keaton Clarke smiling outdoors at night"><figcaption>OFF DUTY · UNWIND</figcaption></figure>
+    <figure><img src="images/engagement.jpeg" alt="Keaton Clarke at a formal engagement event"><figcaption>CELEBRATION · FAMILY</figcaption></figure>
+    <figure><img src="images/hero.jpeg" alt="Keaton Clarke seated in a three-piece suit"><figcaption>ON DUTY · FOCUS</figcaption></figure>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Boarding Pass</div>
+      <h2>Let's connect</h2>
+      <p class="lede">Reach out — every message gets a reply, wherever it lands.</p>
+    </div>
+    <div class="crew-card">
+      <div class="crew-main">
+        <div class="name">Keaton Clarke</div>
+        <div class="role">Passenger · Open to Opportunities</div>
+
+        <div class="contact-item">
+          <span class="label">Email</span>
+          <a class="val" href="mailto:Keatonclarke37@gmail.com">Keatonclarke37@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="label">Email (Alt)</span>
+          <a class="val" href="mailto:clarkekeaton75@gmail.com">clarkekeaton75@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="label">Mobile</span>
+          <a class="val" href="tel:+233204148130">+233 204 148 130</a>
+          <span class="whatsapp-note">Active on WhatsApp</span>
+        </div>
+        <div class="contact-item">
+          <span class="label">Mobile (Alt)</span>
+          <a class="val" href="tel:+233594949743">+233 594 949 743</a>
+          <span class="whatsapp-note">Active on WhatsApp</span>
+        </div>
+        <div class="contact-item">
+          <span class="label">LinkedIn</span>
+          <a class="val" href="https://www.linkedin.com/in/keaton-c-535616161" target="_blank" rel="noopener">linkedin.com/in/keaton-c-535616161</a>
+        </div>
+      </div>
+      <div class="crew-side">
+        <div>
+          <div class="barcode"></div>
+          <div class="boarding">FLIGHT KC-2026 · SEQ 001 · GATE OPEN</div>
+        </div>
+        <div class="motto">"Live Full...<br>Die Empty"</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 KEATON CLARKE — ALL SYSTEMS NOMINAL</footer>
+
+</body>
+</html>
